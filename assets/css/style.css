@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css?family=Kanit:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Playwrite+IN:100,200,300,regular);
 
+
 * {
   margin: 0;
   padding: 0;
@@ -211,7 +212,6 @@ header .navbar ul li a:hover {
 .home .image img {
   width: 70%;
   margin-left: 6rem;
-  cursor: pointer;
 }
 
 
@@ -411,7 +411,6 @@ header .navbar ul li a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10rem 0;
 }
 
 .about .row {
@@ -529,7 +528,6 @@ header .navbar ul li a:hover {
 .skills {
   min-height: 90vh;
   background-color: rgb(218, 217, 217);
-  padding-top: 10rem;
 }
 
 .skills h2 {
@@ -586,7 +584,6 @@ header .navbar ul li a:hover {
 .education {
   background: #e5ecfb;
   min-height: 80vh;
-  padding-top: 10rem;
 }
 
 .education .qoute {
@@ -715,7 +712,6 @@ header .navbar ul li a:hover {
 
 .work {
   position: relative;
-  padding-top: 10rem;
   background: linear-gradient(to bottom, #000031, #00002c);
 }
 
@@ -921,7 +917,7 @@ header .navbar ul li a:hover {
   height: 100px;
   border-radius: 50%;
   position: relative;
-  left: 50%;
+  left: 45%;
   transform: translate(-50%, -50%);
   z-index: 100;
   margin-top: 50px;
@@ -1095,7 +1091,7 @@ header .navbar ul li a:hover {
 .contact {
   background: #fbe5ee;
   min-height: 60vh;
-  padding-top: 10rem;
+  padding-top: 15rem;
 }
 
 .contact .container {
@@ -1319,7 +1315,7 @@ form .button-area {
 .footer {
   min-height: auto;
   padding-top: 0;
-  background: rgb(5, 141, 179);
+  background: rgb(75, 53, 2);
 }
 
 .footer .box-container {
@@ -1335,7 +1331,7 @@ form .button-area {
 
 .footer .box-container .box h3 {
   font-size: 2.5rem;
-  color: #ee0067;
+  color: #ffffff;
   padding-bottom: 1rem;
   font-weight: normal;
 }
@@ -1360,6 +1356,7 @@ form .button-area {
 }
 
 .footer .box-container .box a:hover {
+  display: inline-block;
   border-bottom: #ee0067 solid 2px;
 }
 
@@ -1381,11 +1378,6 @@ form .button-area {
   background: rgb(230, 230, 230);
   color: #02094b;
   border: none;
-}
-
-.footer .box-container .box .share i {
-  height: 25px;
-  width: 25px;
 }
 
 .footer .box-container .box .share a:hover {
@@ -1416,8 +1408,7 @@ form .button-area {
   animation: pound 0.35s infinite alternate;
 }
 
-
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .footer .box-container .box {
     flex: 1 1 100%;
     margin: 1rem 0;
@@ -1461,7 +1452,73 @@ form .button-area {
   }
 }
 
+.ft-socials {
+  position: relative;
+}
 
+.ft-socials .social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.ft-socials .social-icons li {
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.social-icons a {
+  font-size: 2rem;
+  display: inline-block;
+  line-height: 44px;
+  color: #00d9ff;
+  background-color: #09011b;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+  color: #fff;
+  background-color: #0978e6;
+}
+
+.social-icons a.github:hover {
+  background-color: #0e0e0e;
+}
+
+.social-icons a.twitter:hover {
+  background-color: #00aced;
+}
+
+.social-icons a.linkedin:hover {
+  background-color: #000fb6;
+}
+
+.social-icons a.dev:hover {
+  background-color: #070707;
+}
+
+.social-icons a.instagram:hover {
+  background-color: #ee0067;
+}
+
+.social-icons a.facebook:hover {
+  background-color: #011aff;
+  color: white;
+}
+
+.social-icons a.whatsapp:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 167, 36);
+}
 
 #scroll-top {
   position: fixed;
