@@ -25,6 +25,20 @@ body {
   background: #f7f7f7;
   font-family: "Poppins", sans-serif;
 }
+.ico{
+  width: 80px;
+
+}
+.icob{
+  width: 40px;
+}
+.icos {
+  width: 100px;
+  position: relative;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
 
 *::selection {
   background: #2b3dda;
@@ -40,7 +54,7 @@ html::-webkit-scrollbar {
   width: 0px;
 }
 header {
-  position: fixed;
+  position:sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -49,18 +63,18 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 30px 10%;
+  width: 100%;
   height: 90px;
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
 }
 
 section {
-  max-height:fit-content;
   padding: 2rem 9%;
 }
 
 .heading {
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: rgb(12, 35, 69);
   font-weight: 800;
   text-align: center;
@@ -133,7 +147,7 @@ header .navbar ul li a:hover {
     position: fixed;
     top: 4.5rem;
     right: -120%;
-    width: 75%;
+    width: 50%;
     height: 80%;
     text-align: left;
     align-items: flex-start;
@@ -175,6 +189,7 @@ header .navbar ul li a:hover {
 
   header .navbar.nav-toggle {
     right: 0;
+    top: 90px;
   }
 }
 
@@ -523,6 +538,82 @@ header .navbar ul li a:hover {
   transform: translateX(5px);
   transform: rotate(360deg);
 }
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem;
+  }
+
+  .about .row {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .about .row .image {
+    flex: 1 1 100%;
+    margin-bottom: 2rem;
+  }
+
+  .about .row .image img {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .about .row .content {
+    flex: 1 1 100%;
+    padding: 1rem;
+  }
+
+  .about .row .content h3 {
+    font-size: 2rem;
+  }
+
+  .about .row .content h4 {
+    font-size: 1.5rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.4rem;
+  }
+
+  .about .row .content .tag {
+    font-size: 1.2rem;
+  }
+
+  .resumebtn .btn {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.6rem;
+  }
+
+  .resumebtn .btn i {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about .row .content h3 {
+    font-size: 1.8rem;
+  }
+
+  .about .row .content h4 {
+    font-size: 1.3rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.2rem;
+  }
+
+  .resumebtn .btn {
+    padding: 1.3rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  .resumebtn .btn span {
+    font-size: 1.6rem;
+  }
+}
 
 /* SKILLS SECTION */
 .skills {
@@ -541,7 +632,6 @@ header .navbar ul li a:hover {
 .container {
   padding: 15px;
   width: 100%;
-  background-color: whitesmoke;
 }
 
 .row {
@@ -673,14 +763,13 @@ header .navbar ul li a:hover {
 
   .education .box-container .box {
     flex-direction: column;
-    width: 90%;
     margin-top: 1.5rem;
   }
 
   .education .box-container .box .image {
     flex: 1 1 auto;
     width: 100%;
-    height: 200px; 
+    height: 200px;
   }
 
   .education .box-container .box .content {
@@ -858,11 +947,6 @@ header .navbar ul li a:hover {
     padding-top: 5rem;
   }
 
-  .work h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-  }
-
   .work .box-container {
     gap: 1rem;
   }
@@ -908,8 +992,6 @@ header .navbar ul li a:hover {
 
 .experience .timeline {
   position: relative;
-  max-width: auto;
-  margin: 0 auto;
 }
 
 .experience .timeline img {
@@ -975,7 +1057,7 @@ header .navbar ul li a:hover {
   position: absolute;
   top: 22px;
   width: 0;
-  z-index: 1;
+  z-index: -1;
   right: 30px;
   border: medium solid #09f697;
   border-width: 10px 0 10px 10px;
@@ -988,7 +1070,7 @@ header .navbar ul li a:hover {
   position: absolute;
   top: 22px;
   width: 0;
-  z-index: 1;
+  z-index: -1;
   left: 30px;
   border: medium solid #09f697;
   border-width: 10px 10px 10px 0;
@@ -1090,16 +1172,12 @@ header .navbar ul li a:hover {
 /* CONTACT SECTION */
 .contact {
   background: #fbe5ee;
-  min-height: 60vh;
-  padding-top: 15rem;
 }
 
 .contact .container {
-  max-width: 1050px;
   width: 100%;
   background: #f59797;
   border-radius: 1.5rem;
-  margin: 2rem 5rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -1113,7 +1191,6 @@ header .navbar ul li a:hover {
 
 .contact .content .image-box {
   max-width: 60%;
-  margin-left: 4rem;
 }
 
 .contact .content .image-box img {
@@ -1124,7 +1201,6 @@ header .navbar ul li a:hover {
 
 .contact .content form {
   width: 45%;
-  margin-right: 3.5rem;
 }
 
 form .form-group {
@@ -1246,72 +1322,55 @@ form .button-area {
 .button-area button:hover i {
   left: 8px;
 }
-
-@media(max-width: 768px) {
-  .contact {
-    padding-top: 5rem;
-  }
-
-  .contact .container {
-    margin: 1rem;
-  }
-
+@media (max-width: 768px) {
   .contact .container .content {
-    flex-direction: column;
+    flex-direction: column; /* Stack elements vertically */
     align-items: center;
-    padding: 1.5rem;
   }
 
   .contact .content .image-box {
     max-width: 100%;
-    margin-left: 0;
-    margin-bottom: 1rem;
-  }
-
-  .contact .content .image-box img {
-    height: auto;
-    max-width: 100%;
+    margin: 0; /* Remove margin */
   }
 
   .contact .content form {
-    width: 100%;
-    margin-right: 0;
+    width: 100%; /* Full width on mobile */
+    margin-right: 0; /* Remove margin */
+    margin-left: 0; /* Remove margin */
   }
 
-  form .form-group {
-    margin: 0.5rem 0;
+  form .button-area {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+  }
+
+  .button-area button {
+    font-size: 1.5rem; /* Smaller button font size */
+    padding: 10px 20px; /* Adjust padding */
   }
 
   form .field input,
   form .message textarea {
-    font-size: 14px;
-  }
-
-  form .message {
-    margin: 0.5rem 0;
-  }
-
-  form .message textarea {
-    min-height: 100px;
-    max-height: 150px;
-  }
-
-  .button-area {
-    justify-content: center;
-    float: none;
-  }
-
-  .button-area button {
-    font-size: 1.5rem;
-    padding: 10px 20px;
-  }
-
-  .button-area button i {
-    font-size: 1.3rem;
-    left: 4px;
+    font-size: 14px; /* Smaller input font size */
   }
 }
 
+@media (max-width: 480px) {
+  .contact .container {
+    padding: 0.5rem; /* Smaller padding */
+  }
+
+  .contact .container .content {
+    padding: 1rem; /* Smaller padding */
+  }
+
+  form .button-area button {
+    font-size: 1.2rem; /* Further reduce button font size */
+    padding: 8px 15px; /* Further adjust padding */
+  }
+}
+
+/* FOOTER SECTION */
 .footer {
   min-height: auto;
   padding-top: 0;
