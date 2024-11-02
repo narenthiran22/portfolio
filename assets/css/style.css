@@ -3,7 +3,6 @@
 @import url(https://fonts.googleapis.com/css?family=Kanit:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Playwrite+IN:100,200,300,regular);
 
-
 * {
   margin: 0;
   padding: 0;
@@ -25,11 +24,10 @@ body {
   background: #f7f7f7;
   font-family: "Poppins", sans-serif;
 }
-.ico{
+.ico {
   width: 80px;
-
 }
-.icob{
+.icob {
   width: 40px;
 }
 .icos {
@@ -54,7 +52,7 @@ html::-webkit-scrollbar {
   width: 0px;
 }
 header {
-  position:sticky;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -130,7 +128,6 @@ header .navbar ul li a:hover {
   cursor: pointer;
   color: rgb(0, 0, 0);
   display: none;
-
 }
 
 @media (max-width: 768px) {
@@ -228,7 +225,6 @@ header .navbar ul li a:hover {
   width: 70%;
   margin-left: 6rem;
 }
-
 
 .home .content h2 {
   font-size: 5rem;
@@ -362,7 +358,8 @@ header .navbar ul li a:hover {
   background-color: rgb(0, 167, 36);
 }
 @media (max-width: 768px) {
-  .home .content, .home .image {
+  .home .content,
+  .home .image {
     flex: 1 1 100%;
     text-align: center;
     padding: 1rem;
@@ -482,7 +479,7 @@ header .navbar ul li a:hover {
   text-transform: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+ID:wght@100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+ID:wght@100..400&display=swap");
 
 .about .row .content .box-container {
   display: flex;
@@ -616,58 +613,228 @@ header .navbar ul li a:hover {
 }
 
 /* SKILLS SECTION */
-.skills {
-  min-height: 90vh;
-  background-color: rgb(218, 217, 217);
-}
-
-.skills h2 {
-  color: #1f00ba;
-}
-
-.skills .heading span {
-  color: rgb(255, 0, 187);
-}
-
-.container {
-  padding: 15px;
+.scroll-wrapper {
+  height: 100%; /* Adjust this height as needed */
   width: 100%;
+  overflow-y: auto;
 }
 
-.row {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+/* Optional: Customize scrollbar for a cleaner look */
+.scroll-wrapper::-webkit-scrollbar {
+  width: 8px;
+  height: 100%;
 }
 
-.info {
-  margin: 15px;
-  width: 150px;
-  padding: 5px;
+.scroll-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb {
+  background-color: #888;
   border-radius: 10px;
-  text-align: center;
-  background-color: #000000;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.761);
-  transition: transform 0.3s ease-in-out;
+}
 
-  &:hover, .info img {
-    transform: scale(1.05);
-    filter: brightness(1.1) contrast(1.2);
+.scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.skill-card-wrapper {
+  width: 100%;
+  text-align: center;
+  display: ruby;
+}
+
+.skill-card {
+  margin: 10px;
+  height: 280px;
+  width: 300px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 5px 5px gray;
+  background-color: #fff;
+  padding: 0;
+  z-index: 0;
+}
+
+.skill-card-top {
+  height: 100px;
+  position: relative;
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.skill-card-icon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+  border: 5px solid #fff;
+  box-sizing: border-box;
+  left: 100px;
+  top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.9rem;
+}
+
+.skill-card-content {
+  padding: 10px;
+  height: auto;
+  background-color: #fff;
+  height: 100%;
+}
+
+.skill-card-title {
+  font-size:25px;
+  margin-top: 40px;
+  color: black;
+}
+
+.skill-card-content p {
+  font-family: "Raleway", sans-serif;
+  color: #333;
+  font-size: 12px;
+  padding: 10px;
+}
+.skill-card-content p span{
+  color: red;
+  font-weight: bold;
+}
+
+/* card-top colors */
+
+.gradient-red {
+  background: linear-gradient(to top, transparent, #cb422a),
+    linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+}
+
+.gradient-blue {
+  background: linear-gradient(to top, transparent, #2d699b),
+    linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+}
+
+.gradient-green {
+  background: linear-gradient(to top right, transparent, #00a482),
+    linear-gradient(to bottom left, transparent, rgba(0, 0, 0, 0.8));
+}
+
+.gradient-gold {
+  background: linear-gradient(to bottom left, transparent, #f2b63f),
+    linear-gradient(to top right, transparent, rgba(0, 0, 0, 0.8));
+}
+
+/* overlay  */
+
+.skill-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 280px;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #000000;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.skill-container {
+  text-align: left;
+  width: 70%;
+}
+
+@keyframes load {
+  from {
+    width: 0%;
+  }
+}
+@-webkit-keyframes load {
+  from {
+    width: 0%;
+  }
+}
+@-moz-keyframes load {
+  from {
+    width: 0%;
+  }
+}
+@-o-keyframes load {
+  from {
+    width: 0%;
   }
 }
 
-.info h2 {
-  color: white;
-  font-size: 2rem;
-  font-weight: bolder;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.bar {
+  background-color: #eee;
+  padding: 2px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+}
+.bar::before {
+  content: attr(data-skill);
+  background-color: #f3b0ff;
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+  border-radius: inherit;
+  animation: load 2s 0s;
+  -webkit-animation: load 2s 0s;
+  -moz-animation: load 2s 0s;
+  -o-animation: load 2s 0s;
+}
+/***** Bar Color ***********/
+.bar.top::before {
+  background-color: #ffbf00;
 }
 
-.info img {
-  width: 100px;
-  height: 100px;
+.bar.front::before {
+  background-color: #00ffb3;
+}
+.bar.back::before {
+  background-color: #00aaff;
 }
 
+.bar.sideway::before {
+  background-color: #ef2b45;
+}
+
+/*******Bar progress *****/
+
+.bar.learning::before {
+  width: calc(20% - 10px);
+}
+.bar.basic::before {
+  width: calc(40% - 10px);
+}
+.bar.intermediate::before {
+  width: calc(60% - 10px);
+}
+.bar.advanced::before {
+  width: calc(80% - 10px);
+}
+.bar.expert::before {
+  width: calc(100% - 10px);
+}
+
+/* slide */
+
+.slider {
+  transform: translateX(-100%);
+  transition: all 0.4s ease-out;
+}
+
+.skill-card:hover .slider {
+  transform: translateX(0);
+}
 
 /* EDUCATION SECTION */
 
@@ -797,7 +964,6 @@ header .navbar ul li a:hover {
 }
 
 /* PROJECT SECTION */
-
 
 .work {
   position: relative;
@@ -941,8 +1107,7 @@ header .navbar ul li a:hover {
   transform: translateX(5px);
 }
 
-
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .work {
     padding-top: 5rem;
   }
@@ -983,7 +1148,6 @@ header .navbar ul li a:hover {
     font-size: 1.3rem;
   }
 }
-
 
 /* EXPERIENCE SECTION */
 .experience {
@@ -1107,10 +1271,7 @@ header .navbar ul li a:hover {
   font-size: 1.2rem;
 }
 
-
-
-
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .experience {
     padding: 5rem 1rem;
   }
@@ -1167,7 +1328,6 @@ header .navbar ul li a:hover {
     margin-top: 2rem;
   }
 }
-
 
 /* CONTACT SECTION */
 .contact {
@@ -1251,8 +1411,8 @@ form .message textarea {
   border: 2px solid rgb(0, 255, 140);
 }
 
-.field input:focus~i,
-.message textarea:focus~i {
+.field input:focus ~ i,
+.message textarea:focus ~ i {
   color: rgb(0, 0, 0);
 }
 
@@ -1599,3 +1759,4 @@ form .button-area {
 #scroll-top.active {
   top: calc(100% - 12rem);
 }
+

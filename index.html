@@ -6,6 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/progresscircle.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -77,8 +78,7 @@
         <h4 data-aos="fade-left">-Developer</h4>
         </span>
 
-        <p data-aos="flip-right"><span style="color: red;">I am a Full-Stack developer</span> based in Tamilnadu, India,
-          and an MSc Computer Science graduate from Pachaiyappa's College for Men, Kanchipuram. I am passionate about improving my coding skills and developing applications and websites. I am continually working to enhance my abilities and love building Full-Stack clones.</p>
+        <p data-aos="flip-right"><span style="color: rgb(236, 79, 79);">I am a Full-Stack Developer </span>based in Tamil Nadu, India, and hold an MSc in Computer Science from Pachaiyappa's College for Men, Kanchipuram. Passionate about advancing my coding skills, I am dedicated to building dynamic, user-centered applications and websites. I am always striving to learn new technologies and refine my expertise, with a special love for creating Full-Stack applications and building innovative, fully functional clones. Every project I undertake is a step towards mastering my craft and making a meaningful impact through technology.</p>
 
         <div class="box-container">
           <div class="box">
@@ -90,7 +90,8 @@
         </div>
 
         <div class="resumebtn" data-aos="flip-left">
-          <a href="https://1drv.ms/w/s!Ai6wzXFzWlJChXa4qYHZ-GH4yLLS?embed=1&amp;em=2https://1drv.ms/w/s!Ai6wzXFzWlJChXa4qYHZ-GH4yLLS?embed=1&amp;em=2" target="_blank" class="btn"><span>Resume</span>
+          <a href="https://1drv.ms/w/s!Ai6wzXFzWlJChXa4qYHZ-GH4yLLS?embed=1&amp;em=2https://1drv.ms/w/s!Ai6wzXFzWlJChXa4qYHZ-GH4yLLS?embed=1&amp;em=2"
+            target="_blank" class="btn"><span>Resume</span>
             <i class="fas fa-chevron-right"></i>
           </a>
         </div>
@@ -101,64 +102,130 @@
 
   <!-- SKILLS SECTION -->
   <section class="skills" id="skills" data-aos="fade-down">
-
     <img src="./assets/images/icons/skill.gif" alt="" class="icos">
     <h2 class="heading">Skills & <span>Abilities</span></h2>
-    <div class="container">
-      <div class="row">
-        <div class="info" data-aos="fade-right">
-          <img src="./assets/images/skills/html.png" alt="HTML">
-          <h2>HTML</h2>
+    <!--  Slide  -->
+    <div class="skill-card-wrapper">
+
+      <!-- Hard skills card-->
+      <div class="skill-card" data-aos="fade-right">
+        <div class="skill-card-top gradient-gold">
+          <div class="skill-card-icon">
+            <i class="fa fa-user"></i>
+          </div>
+        </div>
+        <div class="skill-card-content">
+          <h4 class="skill-card-title"> Skills</h4>
+          <p><strong>"Skill is the bridge between inspiration and achievement."</strong><br><span>— Anonymous</span></p>
         </div>
 
-        <div class="info" data-aos="fade-left">
-          <img src="./assets/images/skills/css.png" alt="CSS">
-          <h2>CSS</h2>
+        <div class="skill-card-overlay slider">
+          <div class="skill-container">
+            <div class="bar top advanced" data-skill="Problem solving"></div>
+            <div class="bar top intermediate" data-skill="Teamwork"></div>
+            <div class="bar top basic" data-skill="Creativity"></div>
+            <div class="bar top expert" data-skill="Communication"></div>
+
+            <div class="bar top advanced" data-skill="Preassure management"></div>
+
+            <div class="bar top advanced" data-skill="Attention to detail"></div>
+
+          </div>
+        </div>
+      </div>
+      <!-- End of card-->
+
+      <!-- Language skill card-->
+      <div class="skill-card" data-aos="fade-right">
+        <div class="skill-card-top gradient-blue">
+          <div class="skill-card-icon">
+            <i class="fa fa-language"></i>
+          </div>
+        </div>
+        <div class="skill-card-content">
+          <h4 class="skill-card-title">Languages</h4>
+          <p><strong>"The only way to do great work is to love what you do."</strong><br><span> — Steve Jobs</span></p>
         </div>
 
-        <div class="info" data-aos="fade-right">
-          <img src="./assets/images/skills/js.png" alt="JS">
-          <h2>JAVASCRIPT</h2>
+        <div class="skill-card-overlay slider">
+          <div class="skill-container">
+            <div class="bar back expert" data-skill="Tamil"></div>
+            <div class="bar back intermediate" data-skill="English"></div>
+          </div>
+        </div>
+      </div>
+      <!-- End of card-->
+
+
+      <!--Development skills card -->
+
+      <div class="skill-card" data-aos="fade-right">
+        <div class="skill-card-top gradient-red">
+          <div class="skill-card-icon">
+            <i class="fa fa-code"></i>
+          </div>
+        </div>
+        <div class="skill-card-content">
+          <h4 class="skill-card-title">Development</h4>
+          <p><strong>"Development is the art of turning ideas into reality, one line of code at a time."</strong><br><span>— Sundar Pichai</span> </p>
+        </div>
+        <div class="skill-card-overlay slider">
+          <div class="scroll-wrapper">
+            <div class="skill-container">
+              <div class="bar sideway advanced" data-skill="HTML5"></div>
+              <div class="bar sideway advanced" data-skill="CSS3"></div>
+              <div class="bar sideway advanced" data-skill="Javascript"></div>
+              <div class="bar sideway advanced" data-skill="BOOTSTRAP"></div>
+              <div class="bar sideway advanced" data-skill="JQuary"></div>
+              <div class="bar sideway advanced" data-skill="Python"></div>
+              <div class="bar sideway advanced" data-skill="PHP"></div>
+              <div class="bar sideway advanced" data-skill="C Programming"></div>
+              <div class="bar sideway intermediate" data-skill="C++"></div>
+              <div class="bar sideway intermediate" data-skill="Django"></div>
+              <div class="bar sideway intermediate" data-skill="MYSQL"></div>
+              <div class="bar sideway intermediate" data-skill="Tailwind CSS"></div>
+              <div class="bar sideway learning" data-skill="ReactJs"></div>
+              <div class="bar sideway learning" data-skill="Flutter"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-card" data-aos="fade-right">
+        <div class="skill-card-top gradient-green">
+          <div class="skill-card-icon">
+            <i class="fa fa-sitemap"></i>
+          </div>
+        </div>
+        <div class="skill-card-content">
+          <h4 class="skill-card-title">Software</h4>
+          <p><strong>"Software is the magic that bridges imagination and execution. Keep pushing boundaries and creating wonders!"</strong> <br><span>- Leonardo da Vinci</span></p>
         </div>
 
-        <div class="info" data-aos="fade-left">
-          <img src="./assets/images/skills/bootstarp.png" alt="BOOTSTARP">
-          <h2>BOOTSTARP</h2>
+        <div class="skill-card-overlay slider">
+          <div class="scroll-wrapper">
+            <div class="skill-container">
+              <div class="bar front expert" data-skill="MS Office"></div>
+              <div class="bar front basic" data-skill="PhotoShop"></div>
+              <div class="bar front basic" data-skill="Tally"></div>
+              <div class="bar front intermediate" data-skill="CodeBlocks"></div>
+              <div class="bar front intermediate" data-skill="Visual Studio Code"></div>
+              <div class="bar front intermediate" data-skill="XAMPP"></div>
+              <div class="bar front intermediate" data-skill="SQL Server Management"></div>
+              <div class="bar front basic" data-skill="Android Studio"></div>
+              <div class="bar front basic" data-skill="GitHub"></div>
+            </div>
+          </div>
         </div>
-
-        <div class="info" data-aos="fade-right">
-          <img src="./assets/images/skills/C.png" alt="C">
-          <h2>C</h2>
-        </div>
-
-        <div class="info" data-aos="fade-left">
-          <img src="./assets/images/skills/C++.png" alt="C++">
-          <h2>C++</h2>
-        </div>
-
-        <div class="info" data-aos="fade-right">
-          <img src="./assets/images/skills/python.png" alt="PYTHON">
-          <h2>PYTHON</h2>
-        </div>
-
-        <div class="info" data-aos="fade-left">
-          <img src="./assets/images/skills/php.png" alt="PHP">
-          <h2>PHP</h2>
-        </div>
-
-        <div class="info" data-aos="fade-right">
-          <img src="./assets/images/skills/mysql.png" alt="MYSQL">
-          <h2>MYSQL</h2>
-        </div>
-
       </div>
     </div>
   </section>
 
+
   <!-- EDUCATION SECTION -->
   <section class="education" id="education" data-aos="fade-down">
 
-  <img src="./assets/images/icons/edu.gif" alt="" class="icos">
+    <img src="./assets/images/icons/edu.gif" alt="" class="icos">
     <h1 class="heading"> My <span>Education</span></h1>
 
     <p class="qoute">"Education is the most powerful weapon which you can use to change the world."</p>
@@ -382,7 +449,8 @@
     </div>
     </div>
 
-    <h1 class="credit">Developed By   <span><img src="./assets/images/icons/heart.gif" alt="" class="icob"></span><a href="#">    Narenthiran</a></h1>
+    <h1 class="credit">Developed By <span><img src="./assets/images/icons/heart.gif" alt="" class="icob"></span><a
+        href="#"> Narenthiran</a></h1>
 
   </section>
 
@@ -395,6 +463,12 @@
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="./assets/js/progresscircle.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
   <script>
     AOS.init();
   </script>
