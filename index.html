@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta name="google-site-verification" content="Uksx_nXiC9dGhNeFbIvb5K-OXaA8PlvAG33FCJHfhMY" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nari's Portfolio showcasing skills, projects, and professional experience.">
-    <meta name="keywords" content=" Narenthiran, nari, Portfolio, Web Developer, HTML, CSS, JavaScript, PHP, MySQL, Projects">
-    <meta name="author" content="Nari">
-    <meta name="robots" content="index, follow"> <!-- Tells search engines to index the page -->    
-    <!-- Open Graph meta tags for social media sharing -->
-    <meta property="og:title" content="Nari's Portfolio">
-    <meta property="og:description" content="Showcasing my skills, projects, and professional experience.">
-    <meta property="og:image" content="./assets/img/nari.png">
-    <meta property="og:url" content="https://narenthiran22.github.io/portfolio/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nari's Portfolio showcasing skills, projects, and professional experience.">
+  <meta name="keywords"
+    content=" Narenthiran, nari, Portfolio, Web Developer, HTML, CSS, JavaScript, PHP, MySQL, Projects">
+  <meta name="author" content="Nari">
+  <meta name="robots" content="index, follow"> <!-- Tells search engines to index the page -->
+  <!-- Open Graph meta tags for social media sharing -->
+  <meta property="og:title" content="Nari's Portfolio">
+  <meta property="og:description" content="Showcasing my skills, projects, and professional experience.">
+  <meta property="og:image" content="./assets/img/nari.png">
+  <meta property="og:url" content="https://narenthiran22.github.io/portfolio/">
 
   <!--=============== FAVICON ===============-->
   <link rel="shortcut icon" href="./assets/img/nari.png" type="image/x-icon" />
@@ -545,8 +545,7 @@
                 <label for=""><i class="ri-telegram-2-fill"></i> Message</label>
                 <span>Message</span>
               </div>
-              <button type="submit" class="btn">Send Message</button>
-              <p class="contact-message" id="contact-message"></p>
+              <input type="submit" id="button" value="Send Message" class="btn">
             </form>
           </div>
         </div>
@@ -640,127 +639,54 @@
     <!--=============== SWIPER JS ===============-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
 
+    <!--=============== SWEET ALERT ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.0/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.0/dist/sweetalert2.all.min.js"></script>
+
 
     <!--=============== EMAIL JS ===============-->
-    <script>
-      document.getElementById('contactForm').addEventListener('submit', function (event) {
-        event.preventDefault();
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-        var formData = new FormData(event.target);
-        var name = formData.get('name');
-        var email = formData.get('email');
-        var phone = formData.get('phone');
-        var message = formData.get('message');
-
-        sendEmailToOwner(name, email, phone, message, function () {
-          sendThankYouEmail(name, email);
-        });
-      });
-
-      function sendEmailToOwner(name, email, phone, message, callback) {
-        const apiKey = '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';
-
-        const requestData = {
-          sender: { email: "portfolioassistant8@gmail.com" },
-          to: [{ email: "narenthiran0003@icloud.com" }],
-          subject: "🌟 Hello Boss, SomeOne Contacted You! 📨",
-          htmlContent: `
-      <div style="font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.8; color: #333; padding: 20px; border: 1px solid #ddd; border-radius: 12px; background-color: #f9f9f9; max-width: 600px; margin: auto;">
-        <h2 style="color: #FF9800; text-align: center; font-size: 1.8em;">🤖 Hey Boss! Someone Reached Out 🚀</h2>
-        <p style="font-size: 1.1em; text-align: center;">Your portfolio just grabbed some attention! Here are the details:</p>
-        <div style="background-color: #fff; padding: 10px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
-          <p style="font-size: 1.2em;">👤 <strong>Name:</strong> <span style="color: #4CAF50;">${name}</span></p>
-          <p style="font-size: 1.2em;">📧 <strong>Email:</strong> <a href="mailto:${email}" style="color: #2196F3; text-decoration: none;">${email}</a></p>
-          <p style="font-size: 1.2em;">📞 <strong>Phone:</strong> <span style="color: #FF5722;">${phone}</span></p>
-          <p style="font-size: 1.2em;">💬 <strong>Message:</strong></p>
-          <blockquote style="border-left: 5px solid #FF9800; padding-left: 10px; margin: 10px 0; font-style: italic; color: #555; font-size: 1.1em;">${message}</blockquote>
-        </div>
-        <p style="margin-top: 20px; text-align: center; font-size: 1.1em; color: #555;">
-          🛠️ <strong>Tip:</strong> Use your charming communication skills to reply promptly. Let's keep the ball rolling! 🎉
-        </p>
-        <div style="text-align: center; margin-top: 20px;">
-          <a href="mailto:${email}" style="background-color: #4CAF50; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 1.1em; display: inline-block;">📩 Reply Now</a>
-        </div>
-        <p style="margin-top: 30px; text-align: center; color: #999; font-size: 0.9em;">This email was sent by your amazing portfolio assistant 🤖</p>
-      </div>
-      `
-        };
-
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://api.sendinblue.com/v3/smtp/email', true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.setRequestHeader('api-key', apiKey);
-
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState === 4) {
-            if (xhr.status === 201) {
-              callback();
-            } else {
-              document.getElementById('contact-message').innerText = 'Failed to send your message. Please try again.';
-              document.getElementById('contact-message').style.color = 'red';
-            }
-          }
-        };
-
-        xhr.send(JSON.stringify(requestData));
-      }
-
-      function sendThankYouEmail(name, email) {
-        const apiKey = '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'; // Secure this key on the server!
-
-        const thankYouData = {
-          sender: { email: "portfolioassistant8@gmail.com" },
-          to: [{ email: email }],
-          subject: "Thank You for Contacting Us! 🙏",
-          htmlContent: `
-          <div style="font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.8; color: #333; background-color: #f9f9f9; padding: 20px; border-radius: 12px; max-width: 600px; margin: auto;        box-shadow:  0px 4px 8px rgba(0, 0, 0, 0.1);">
-            <h1 style="text-align: center; color: #FF9800; font-size: 2em;">🌟 வணக்கம் ${name}! (Hello ${name}!)</h1>
-            <p style="font-size: 1.2em; text-align: center; color: #4CAF50;">🎉 நன்றி! (Thank You!)</p>
-            <p style="font-size: 1.1em;">We’re excited to receive your message and are thrilled you visited our portfolio! Here's what happens next:</p>
-            <ul style="font-size: 1.1em; padding-left: 20px; color: #555;">
-              <li>📧 Your message has been safely delivered.</li>
-              <li>⏳ We'll review it and get back to you soon.</li>
-              <li>📞 Feel free to reply if it's urgent!</li>
-            </ul>
-            <p style="font-size: 1.1em; color: #555;">தயவுசெய்து பொறுத்திருந்து உதவுங்கள். (Please wait patiently while we assist you!) 😊</p>
-            <p style="margin-top: 20px; text-align: center; font-size: 1.1em; color: #555;">
-             💡 Need something urgent? Feel free to reach out anytime.
-            </p>
-            <div style="text-align: center; margin-top: 20px;">
-              <a href="mailto:narenthiran0003@icloud.com" style="background-color: #FF5722; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 1.1em; display: inline-block;">
-              📩 Reply Now
-               </a>
-            </div>
-              <p style="margin-top: 30px; text-align: center; color: #999; font-size: 0.9em;">
-                - <strong>Narenthiran's Digital Assistant 🤖</strong> <br>
-              </p>
-          </div>`
-        };
-
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://api.sendinblue.com/v3/smtp/email', true);
-        xhr.setRequestHeader('Content-Type', 'application/json');
-        xhr.setRequestHeader('api-key', apiKey);
-
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState === 4) {
-            const contactMessage = document.getElementById('contact-message');
-            if (xhr.status === 201) {
-              contactMessage.innerText = '🎉 Your message was sent successfully, and we’ve sent you a confirmation email!';
-              contactMessage.style.color = 'green';
-            } else {
-              contactMessage.innerText = 'Your message was sent, but we couldn’t send a confirmation email.';
-              contactMessage.style.color = 'orange';
-            }
-            document.getElementById('contactForm').reset();
-          }
-        };
-
-        xhr.send(JSON.stringify(thankYouData));
-      }
+    <script type="text/javascript">
+      emailjs.init('NpJt-lMNw2zKe0fFO')
     </script>
+    <script>
+      const btn = document.getElementById('button');
 
+      document.getElementById('contactForm')
+        .addEventListener('submit', function (event) {
+          event.preventDefault();
 
+          btn.value = 'Sending...';
+
+          const serviceID = 'default_service';
+          const templateID = 'template_qkbcxxl';
+
+          emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+              btn.value = 'Send Message';
+              document.getElementById('contactForm').reset();
+              Swal.fire({
+                icon: 'success',
+                title: 'Message Sent!',
+                text: 'Your message has been successfully delivered 🎉.',
+                confirmButtonText: 'OK',
+                timer: 5000,
+                timerProgressBar: true
+              });
+            }, (err) => {
+              btn.value = 'Send Message';
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops!',
+                text: 'Something went wrong 😞. Please try again.',
+                footer: `Error Details: ${JSON.stringify(err)}`,
+                confirmButtonText: 'Retry'
+              });
+            });
+
+        });
+    </script>
 
     <!--=============== MAIN JS ===============-->
     <script src="./assets/js/main.js"></script>
