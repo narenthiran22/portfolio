@@ -2,478 +2,768 @@
 <html lang="en">
 
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=7">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/progresscircle.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="google-site-verification" content="Uksx_nXiC9dGhNeFbIvb5K-OXaA8PlvAG33FCJHfhMY" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nari's Portfolio showcasing skills, projects, and professional experience.">
+    <meta name="keywords" content=" Narenthiran, nari, Portfolio, Web Developer, HTML, CSS, JavaScript, PHP, MySQL, Projects">
+    <meta name="author" content="Nari">
+    <meta name="robots" content="index, follow"> <!-- Tells search engines to index the page -->    
+    <!-- Open Graph meta tags for social media sharing -->
+    <meta property="og:title" content="Nari's Portfolio">
+    <meta property="og:description" content="Showcasing my skills, projects, and professional experience.">
+    <meta property="og:image" content="./assets/img/nari.png">
+    <meta property="og:url" content="https://narenthiran22.github.io/portfolio/">
+
+  <!--=============== FAVICON ===============-->
+  <link rel="shortcut icon" href="./assets/img/nari.png" type="image/x-icon" />
+
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css" />
+
+  <!--=============== FONTAWASOME ICONS ===============-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-  <link id='favicon' rel="shortcut icon" href="./assets/images/nari.JPG" type="image/x-png">
+
+  <!--=============== SWIPER CSS ===============-->
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+
   <title>Portfolio | Narenthiran </title>
 </head>
 
 <body>
-  <header>
-    <img src="./assets/images/icons/programmer.png" class="ico">
-    <a class="logo">Narenthiran</a>
-
-    <div id="menu" class="fas fa-bars"></div>
-    <nav class="navbar">
-      <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#work">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav-logo">
+        <img src="./assets/img/icons/programmer.png" alt="image" />
+        Narenthiran
+      </a>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#education" class="nav-link">Education</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+        <div class="nav-close" id="nav-close">
+          <i class="ri-close-line"></i>
+        </div>
+      </div>
+      <div class="nav-toggle" id="nav-toggle">
+        <i class="ri-apps-fill"></i>
+      </div>
     </nav>
   </header>
 
-  <!-- HOME SECTION -->
-  <section class="home" id="home">
+  <!--==================== MAIN ====================-->
+  <main class="main">
+    <!--==================== HOME ====================-->
+    <section class="home-section" id="home">
+      <div class="home-container container grid">
+        <div class="home-data">
+          <h1 class="home-title">
+            Hello There, <br />
+            I'm <span>Narenthiran</span>
+          </h1>
+          <p class="home-description">
+            i am into <span class="typing-text"></span>
+          </p>
+          <a href="#about" class="button">About Me <i class=" ri-arrow-down-line symble"></i></a>
+          <img src="./assets/img/Fox-Sticker-1.png" alt="image" class="home-sticker-1" />
+          <img src="./assets/img/Angel-Sticker-2.png" alt="image" class="home-sticker-2" />
 
-    <div class="content">
-      <h2>Hello There,<br /> I'm <span>Narenthiran</span></h2>
-      <p>i am into <span class="typing-text"></span></p>
-      <a href="#about" class="btn"><span>About Me</span>
-        <i class="fas fa-arrow-circle-down"></i>
-      </a>
-      <div class="socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn"
-              href="https://www.linkedin.com/in/narenthiran-k-831010290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"><i class="fab fa-linkedin"></i></a></li>
-          <li><a class="github" aria-label="GitHub" href="https://github.com/narenthiran22" target="_blank"><i
-                class="fab fa-github"></i></a></li>
-          <li><a class="telegram" aria-label="Telegram" href="https://t.me/Narenthiran68" target="_blank"><i
-                class="fab fa-telegram-plane"></i></a></li>
-          <li><a class="instagram" aria-label="Instagram"
-              href="https://www.instagram.com/mr__nari__22?igsh=ZXhxNjRzOHRzbm4w&utm_source=qr" target="_blank"><i
-                class="fab fa-instagram"></i></a></li>
-          <li><a class="whatsapp" aria-label="WhatsApp"
-              href="https://api.whatsapp.com/send/?phone=9025826323&text&type=phone_number&app_absent=0"
-              target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="image" data-aos="zoom-in">
-      <img draggable="false" src="./assets/images/mochi-peach.gif" alt="logo">
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section class="about" id="about" data-aos="fade-down">
-    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-    <div class="row">
-      <div class="image" data-tilt data-aos="zoom-out-down">
-        <img draggable="false" class="tilt" src="./assets/images/PWSZ0312.JPG" alt="Narenthiran">
-      </div>
-      <div class="content">
-        <h3 data-aos="fade-up">I'm Narenthiran</h3>
-        <h4 data-aos="fade-left">-Developer</h4>
-        </span>
-
-        <p data-aos="flip-right"><span style="color: rgb(236, 79, 79);">I am a Full-Stack Developer </span>based in Tamil Nadu, India, and hold an MSc in Computer Science from Pachaiyappa's College for Men, Kanchipuram. Passionate about advancing my coding skills, I am dedicated to building dynamic, user-centered applications and websites. I am always striving to learn new technologies and refine my expertise, with a special love for creating Full-Stack applications and building innovative, fully functional clones. Every project I undertake is a step towards mastering my craft and making a meaningful impact through technology.</p>
-
-        <div class="box-container">
-          <div class="box">
-            <p data-aos="fade-left"><span> age: </span> 22</p>
-            <p data-aos="fade-right"><span> phone : </span> +91 9025826323</p>
-            <p data-aos="fade-left"><span> email : </span> narenthiran0003@gmail.com</p>
-            <p data-aos="fade-right"><span> place : </span> TamilNadu, India-604408</p>
+          <div class="home-social">
+            <a href="https://www.linkedin.com/in/narenthiran-k-831010290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+              target="_blank" class="home-social-link"><i class=" ri-linkedin-box-line"></i></a>
+            <a href="https://t.me/Narenthiran68" target="_blank" class="home-social-link"><i
+                class=" ri-telegram-2-line"></i></a>
+            <a href="https://www.instagram.com/mr__nari__22?igsh=ZXhxNjRzOHRzbm4w&utm_source=qr" target="_blank"
+              class="home-social-link"><i class="ri-instagram-line"></i></a>
+            <a href="https://www.facebook.com/narenthiran.k.831010290" target="_blank" class="home-social-link"><i
+                class="ri-facebook-box-line"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=9025826323&text&type=phone_number&app_absent=0"
+              target="_blank" class="home-social-link">
+              <i class="ri-whatsapp-line"></i></a>
           </div>
         </div>
 
-        <div class="resumebtn" data-aos="flip-left">
-          <a href="https://1drv.ms/w/s!Ai6wzXFzWlJChXa4qYHZ-GH4yLLS?embed=1&amp;em=2https://1drv.ms/w/s!Ai6wzXFzWlJChXa4qYHZ-GH4yLLS?embed=1&amp;em=2"
-            target="_blank" class="btn"><span>Resume</span>
-            <i class="fas fa-chevron-right"></i>
-          </a>
+
+        <div class="home-images">
+          <img src="./assets/img/mochi-peach.gif" alt="image" class="home-pizza" />
+        </div </div>
+    </section>
+
+    <!--==================== ABOUT ====================-->
+    <section class="about" id="about">
+      <div class="about-container container grid">
+        <div class="about-data">
+          <h2 class="section-title">
+            Learn More About <br />
+            Our <span>History</span>
+          </h2>
+          <p class="about-description">
+            <span style="color: rgb(236, 79, 79);">I am a Full-Stack Developer </span>based in
+            Tamil Nadu, India, and hold an MSc in Computer Science from Pachaiyappa's College for Men, Kanchipuram.
+            Passionate about advancing my coding skills, I am dedicated to building dynamic, user-centered applications
+            and websites. I am always striving to learn new technologies and refine my expertise, with a special love
+            for
+            creating Full-Stack applications and building innovative, fully functional clones. Every project I undertake
+            is a step towards mastering my craft and making a meaningful impact through technology.
+            <br><br>
+            <span>Age:</span> <span id="age" style="color: black;"></span> Year's Old
+            <br>
+            <span> Phone : </span> +91 9025826323
+            <br>
+            <span> Email : </span> narenthiran0003@gmail.com
+            <br>
+            <span> place : </span> TamilNadu, India-604408
+          </p>
+          <a href="./assets/files/NarenthiranK.pdf" download target="_blank" class="button">Download Resume <i
+              class="ri-download-cloud-2-line"></i></a>
+          <img src="./assets/img/about-fox-sticker.png" alt="image" class="about-sticker" />
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS SECTION -->
-  <section class="skills" id="skills" data-aos="fade-down">
-    <img src="./assets/images/icons/skill.gif" alt="" class="icos">
-    <h2 class="heading">Skills & <span>Abilities</span></h2>
-    <!--  Slide  -->
-    <div class="skill-card-wrapper">
-
-      <!-- Hard skills card-->
-      <div class="skill-card" data-aos="fade-right">
-        <div class="skill-card-top gradient-gold">
-          <div class="skill-card-icon">
-            <i class="fa fa-user"></i>
-          </div>
-        </div>
-        <div class="skill-card-content">
-          <h4 class="skill-card-title"> Skills</h4>
-          <p><strong>"Skill is the bridge between inspiration and achievement."</strong><br><span>— Anonymous</span></p>
-        </div>
-
-        <div class="skill-card-overlay slider">
-          <div class="skill-container">
-            <div class="bar top advanced" data-skill="Problem solving"></div>
-            <div class="bar top intermediate" data-skill="Teamwork"></div>
-            <div class="bar top basic" data-skill="Creativity"></div>
-            <div class="bar top expert" data-skill="Communication"></div>
-
-            <div class="bar top advanced" data-skill="Preassure management"></div>
-
-            <div class="bar top advanced" data-skill="Attention to detail"></div>
-
-          </div>
+        <div class="about-img-container">
+          <img src="./assets/img/PWSZ0312.JPG" alt="image" class="about-img" />
         </div>
       </div>
-      <!-- End of card-->
-
-      <!-- Language skill card-->
-      <div class="skill-card" data-aos="fade-right">
-        <div class="skill-card-top gradient-blue">
-          <div class="skill-card-icon">
-            <i class="fa fa-language"></i>
-          </div>
-        </div>
-        <div class="skill-card-content">
-          <h4 class="skill-card-title">Languages</h4>
-          <p><strong>"The only way to do great work is to love what you do."</strong><br><span> — Steve Jobs</span></p>
-        </div>
-
-        <div class="skill-card-overlay slider">
-          <div class="skill-container">
-            <div class="bar back expert" data-skill="Tamil"></div>
-            <div class="bar back intermediate" data-skill="English"></div>
-          </div>
-        </div>
       </div>
-      <!-- End of card-->
+    </section>
 
+    <!--==================== SKILL SECTION ====================-->
+    <section class="skills" id="skills">
+      <h2 class="section-title">Skills& <span>Abilities</span></h2>
+      <div class="popular-description">
+        <p>Transform your potential into exceptional expertise. We've designed the perfect pathway to help you master
+          the skills that will shape your successful future.</p>
+      </div>
+      <!--  Slide  -->
+      <div class="skill-scroll-wrapper">
 
-      <!--Development skills card -->
-
-      <div class="skill-card" data-aos="fade-right">
-        <div class="skill-card-top gradient-red">
-          <div class="skill-card-icon">
-            <i class="fa fa-code"></i>
+        <!-- Hard skills card-->
+        <div class="skill-card" data-aos="fade-right">
+          <div class="skill-card-top gradient-gold">
+            <div class="skill-card-icon">
+              <i class="fa fa-user"></i>
+            </div>
           </div>
-        </div>
-        <div class="skill-card-content">
-          <h4 class="skill-card-title">Development</h4>
-          <p><strong>"Development is the art of turning ideas into reality, one line of code at a time."</strong><br><span>— Sundar Pichai</span> </p>
-        </div>
-        <div class="skill-card-overlay slider">
-          <div class="scroll-wrapper">
+          <div class="skill-card-content">
+            <h4 class="skill-card-title"> Skills</h4>
+            <p><strong>"Skill is the bridge between inspiration and achievement."</strong><br><span>— Anonymous</span>
+            </p>
+          </div>
+
+          <div class="skill-card-overlay slider">
             <div class="skill-container">
-              <div class="bar sideway advanced" data-skill="HTML5"></div>
-              <div class="bar sideway advanced" data-skill="CSS3"></div>
-              <div class="bar sideway advanced" data-skill="Javascript"></div>
-              <div class="bar sideway advanced" data-skill="BOOTSTRAP"></div>
-              <div class="bar sideway advanced" data-skill="JQuary"></div>
-              <div class="bar sideway advanced" data-skill="Python"></div>
-              <div class="bar sideway advanced" data-skill="PHP"></div>
-              <div class="bar sideway advanced" data-skill="C Programming"></div>
-              <div class="bar sideway intermediate" data-skill="C++"></div>
-              <div class="bar sideway intermediate" data-skill="Django"></div>
-              <div class="bar sideway intermediate" data-skill="MYSQL"></div>
-              <div class="bar sideway intermediate" data-skill="Tailwind CSS"></div>
-              <div class="bar sideway learning" data-skill="ReactJs"></div>
-              <div class="bar sideway learning" data-skill="Flutter"></div>
+              <div class="bar top advanced" data-skill="Problem solving"></div>
+              <div class="bar top intermediate" data-skill="Teamwork"></div>
+              <div class="bar top basic" data-skill="Creativity"></div>
+              <div class="bar top expert" data-skill="Communication"></div>
+
+              <div class="bar top advanced" data-skill="Preassure management"></div>
+
+              <div class="bar top advanced" data-skill="Attention to detail"></div>
+
             </div>
           </div>
         </div>
-      </div>
+        <!-- End of card-->
 
-      <div class="skill-card" data-aos="fade-right">
-        <div class="skill-card-top gradient-green">
-          <div class="skill-card-icon">
-            <i class="fa fa-sitemap"></i>
+        <!-- Language skill card-->
+        <div class="skill-card" data-aos="fade-up">
+          <div class="skill-card-top gradient-blue">
+            <div class="skill-card-icon">
+              <i class="fa fa-language"></i>
+            </div>
           </div>
-        </div>
-        <div class="skill-card-content">
-          <h4 class="skill-card-title">Software</h4>
-          <p><strong>"Software is the magic that bridges imagination and execution. Keep pushing boundaries and creating wonders!"</strong> <br><span>- Leonardo da Vinci</span></p>
-        </div>
+          <div class="skill-card-content">
+            <h4 class="skill-card-title">Languages</h4>
+            <p><strong>"The only way to do great work is to love what you do."</strong><br><span> — Steve Jobs</span>
+            </p>
+          </div>
 
-        <div class="skill-card-overlay slider">
-          <div class="scroll-wrapper">
+          <div class="skill-card-overlay slider">
             <div class="skill-container">
-              <div class="bar front expert" data-skill="MS Office"></div>
-              <div class="bar front basic" data-skill="PhotoShop"></div>
-              <div class="bar front basic" data-skill="Tally"></div>
-              <div class="bar front intermediate" data-skill="CodeBlocks"></div>
-              <div class="bar front intermediate" data-skill="Visual Studio Code"></div>
-              <div class="bar front intermediate" data-skill="XAMPP"></div>
-              <div class="bar front intermediate" data-skill="SQL Server Management"></div>
-              <div class="bar front basic" data-skill="Android Studio"></div>
-              <div class="bar front basic" data-skill="GitHub"></div>
+              <div class="bar back expert" data-skill="Tamil"></div>
+              <div class="bar back intermediate" data-skill="English"></div>
+            </div>
+          </div>
+        </div>
+        <!-- End of card-->
+
+
+        <!--Development skills card -->
+
+        <div class="skill-card" data-aos="fade-down">
+          <div class="skill-card-top gradient-red">
+            <div class="skill-card-icon">
+              <i class="fa fa-code"></i>
+            </div>
+          </div>
+          <div class="skill-card-content">
+            <h4 class="skill-card-title">Development</h4>
+            <p><strong>"Development is the art of turning ideas into reality, one line of code at a
+                time."</strong><br><span>— Sundar Pichai</span> </p>
+          </div>
+          <div class="skill-card-overlay slider">
+            <div class="scroll-wrapper">
+              <div class="skill-container">
+                <div class="bar sideway advanced" data-skill="HTML5"></div>
+                <div class="bar sideway advanced" data-skill="CSS3"></div>
+                <div class="bar sideway advanced" data-skill="Javascript"></div>
+                <div class="bar sideway advanced" data-skill="BOOTSTRAP"></div>
+                <div class="bar sideway advanced" data-skill="JQuery"></div>
+                <div class="bar sideway advanced" data-skill="Python"></div>
+                <div class="bar sideway advanced" data-skill="PHP"></div>
+                <div class="bar sideway advanced" data-skill="C Programming"></div>
+                <div class="bar sideway intermediate" data-skill="C++"></div>
+                <div class="bar sideway intermediate" data-skill="Django"></div>
+                <div class="bar sideway intermediate" data-skill="MYSQL"></div>
+                <div class="bar sideway intermediate" data-skill="Tailwind CSS"></div>
+                <div class="bar sideway learning" data-skill="ReactJs"></div>
+                <div class="bar sideway learning" data-skill="Flutter"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card" data-aos="fade-left">
+          <div class="skill-card-top gradient-green">
+            <div class="skill-card-icon">
+              <i class="fa fa-sitemap"></i>
+            </div>
+          </div>
+          <div class="skill-card-content">
+            <h4 class="skill-card-title">Software</h4>
+            <p><strong>"Programming isn’t about what you know; it’s about what you can figure out."</strong> <br><span>-
+                Chris Pine</span></p>
+          </div>
+
+          <div class="skill-card-overlay slider">
+            <div class="scroll-wrapper">
+              <div class="skill-container">
+                <div class="bar front expert" data-skill="MS Office"></div>
+                <div class="bar front basic" data-skill="PhotoShop"></div>
+                <div class="bar front basic" data-skill="Tally"></div>
+                <div class="bar front intermediate" data-skill="CodeBlocks"></div>
+                <div class="bar front intermediate" data-skill="Visual Studio Code"></div>
+                <div class="bar front intermediate" data-skill="XAMPP"></div>
+                <div class="bar front intermediate" data-skill="SQL Server Management"></div>
+                <div class="bar front basic" data-skill="Android Studio"></div>
+                <div class="bar front basic" data-skill="GitHub"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-  <!-- EDUCATION SECTION -->
-  <section class="education" id="education" data-aos="fade-down">
-
-    <img src="./assets/images/icons/edu.gif" alt="" class="icos">
-    <h1 class="heading"> My <span>Education</span></h1>
-
-    <p class="qoute">"Education is the most powerful weapon which you can use to change the world."</p>
-
-    <div class="box-container">
-
-      <div class="box" data-aos="fade-right">
-        <div class="image">
-          <img draggable="false" src="./assets/images/edu/clg.jpg" alt="">
-        </div>
-        <div class="content">
-          <h3>Master of Science in ComputerScience</h3>
-          <p>Pachaiyappa's College For Men-Kanchipuram</p>
-          <h4>2022-2024 | Completed</h4>
-        </div>
+    <!--==================== EDUCATION SECTION ====================-->
+    <section class="education" id="education">
+      <img src="./assets/img/boy-read-sticker.png" alt="" class="edu-sticker-1">
+      <img src="./assets/img/fox-read-sticker.png" alt="" class="edu-sticker-2">
+      <h2 class="section-title">Academic <br>Milestones</h2>
+      <p class="body-des">"Education is the most powerful weapon which you can use to change the world."</p>
+      <div class="button-container">
+        <button type="button" id="eduButton" onclick="edu()" class="active">Education</button>
+        <button type="button" id="cerButton" onclick="cer()">Certificates</button>
       </div>
-
-      <div class="box" data-aos="fade-left">
-        <div class="image">
-          <img draggable="false" src="./assets/images/edu/clg.jpg" alt="">
-        </div>
-        <div class="content">
-          <h3>Bachelor of Science in ComputerScience</h3>
-          <p>Pachaiyappa's College For Men-Kanchipuram</p>
-          <h4>2019-2022 | Completed</h4>
-        </div>
-      </div>
-
-      <div class="box" data-aos="fade-right">
-        <div class="image">
-          <img draggable="false" src="./assets/images/edu/12th school.jpeg" alt="">
-        </div>
-        <div class="content">
-          <h3>HSC</h3>
-          <p>Government Boys Higher Secondry School - Vandhavasi</p>
-          <h4>2017-2019 | Completed</h4>
-        </div>
-      </div>
-
-      <div class="box" data-aos="fade-left">
-        <div class="image">
-          <img draggable="false" src="./assets/images/edu/10th.jpg" alt="">
-        </div>
-        <div class="content">
-          <h3>SSLC</h3>
-          <p>Government High School - Thenelappakkam</p>
-          <h4>2016-2017 | Completed</h4>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!--  PROJECT SECTION -->
-  <section class="work" id="work" data-aos="fade-down">
-
-    <img src="./assets/images/icons/exp.gif" alt="" class="icos">
-    <h2 class="heading">Projects <span>Made</span></h2>
-
-    <div class="box-container">
-      <div class="box" data-aos="fade-left">
-        <img src="./assets/images/projects/project1.png" alt="Project 1">
-        <div class="content">
-          <div class="tag">
-            <h3>Online Cosmetic and beauty product shopping-PHP & MYSQL</h3>
+      <div class="box-container" id="edu">
+        <div class="box-title">Professional Studies </div>
+        <div class="scroll-wrapper">
+          <div class="box" data-aos="fade-right">
+            <div class="image">
+              <img draggable="false" src="./assets/img/edu/clg.jpg" alt="">
+            </div>
+            <div class="content">
+              <h3 class="body-title">Master of Science in Computer Science</h3>
+              <p class="body-des">Pachaiyappa's College For Men-Kanchipuram</p>
+              <h4 class="body-st">2022-2024 | Completed <i class="ri-checkbox-circle-fill"></i></h4>
+            </div>
           </div>
-          <div class="desc">
-            <p>Our online cosmetic beauty store offers a curated selection of high-quality skincare, makeup, haircare,
-              and fragrance products from top brands. Enjoy the convenience of shopping from home with fast shipping and
-              exceptional customer service, ensuring you find the perfect beauty solutions for your needs.</p>
-            <div class="btns">
-              <a href="#" class="btn" id="code-btn">Code</a>
-              <a href="#" class="btn" id="demo-btn">Demo</a>
+          <div class="box" data-aos="fade-left">
+            <div class="image">
+              <img draggable="false" src="./assets/img/edu/clg.jpg" alt="">
+            </div>
+            <div class="content">
+              <h3 class="body-title">Bachelor of Science in Computer Science</h3>
+              <p class="body-des">Pachaiyappa's College For Men-Kanchipuram</p>
+              <h4 class="body-st">2019-2022 | Completed <i class="ri-checkbox-circle-fill"></i></h4>
+            </div>
+          </div>
+          <div class="box" data-aos="fade-right">
+            <div class="image">
+              <img draggable="false" src="./assets/img/edu/12th school.jpeg" alt="">
+            </div>
+            <div class="content">
+              <h3 class="body-title">HSC</h3>
+              <p class="body-des">Government Boys Higher Secondary School - Vandhavasi</p>
+              <h4 class="body-st">2017-2019 | Completed <i class="ri-checkbox-circle-fill"></i></h4>
+            </div>
+          </div>
+          <div class="box" data-aos="fade-left">
+            <div class="image">
+              <img draggable="false" src="./assets/img/edu/10th.jpg" alt="">
+            </div>
+            <div class="content">
+              <h3 class="body-title">SSLC</h3>
+              <p class="body-des">Government High School - Thenelappakkam</p>
+              <h4 class="body-st">2016-2017 | Completed <i class="ri-checkbox-circle-fill"></i></h4>
             </div>
           </div>
         </div>
       </div>
-      <div class="box" data-aos="fade-right">
-        <img src="./assets/images/projects/project2.png" alt="Project 2">
-        <div class="content">
-          <div class="tag">
-            <h3>Online Resort management system-PHP & MYSQL</h3>
+      <!-- Certificates  -->
+      <div id="cer" class="certificates-container" style="display: none;">
+        <div class="certificates-title">Professional Certificates</div>
+
+        <div class="certificate-item">
+          <div class="certificate-icon">🏆</div>
+          <div class="certificate-details">
+            <div class="certificate-name">Web Development Certification</div>
+            <div class="certificate-issuer">Google Professional</div>
+            <div class="certificate-date">June 2023</div>
           </div>
-          <div class="desc">
-            <p>Our resort management system streamlines operations by integrating booking, guest services, and facility
-              management into one easy-to-use platform. Enhance guest experiences and optimize your resort's efficiency
-              with real-time data, automated processes, and personalized service options.</p>
-            <div class="btns">
-              <a href="#" class="btn" id="code-btn1">Code</a>
-              <a href="#" class="btn" id="demo-btn1">Demo</a>
-            </div>
+        </div>
+
+        <div class="certificate-item">
+          <div class="certificate-icon">🌐</div>
+          <div class="certificate-details">
+            <div class="certificate-name">Advanced React Course</div>
+            <div class="certificate-issuer">Udemy</div>
+            <div class="certificate-date">December 2022</div>
+          </div>
+        </div>
+
+        <div class="certificate-item">
+          <div class="certificate-icon">💻</div>
+          <div class="certificate-details">
+            <div class="certificate-name">Full Stack JavaScript</div>
+            <div class="certificate-issuer">freeCodeCamp</div>
+            <div class="certificate-date">August 2023</div>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
+    <!--==================== PROJECTS ====================-->
+    <section class="products section work" id="projects">
+      <h2 class="section-title">Signature <br> Projects</h2>
+      <img src="./assets/img/pirate-fox-sticker.png" alt="" class="work-sticker">
+      <div class="skill-scroll-wrapper">
 
-  </section>
-
-  <!-- EXPERIENCE SECTION -->
-  <section class="experience" id="experience" data-aos="fade-down">
-
-    <img src="./assets/images/icons/exper.gif" alt="" class="icos">
-    <h2 class="heading">Experience </h2>
-
-    <div class="timeline" data-aos="fade-down">
-
-      <div class="container right" data-aos="fade-down">
-        <div class="content" data-aos="fade-down">
-          <div class="tag" data-aos="fade-down">
-            <h2 data-aos="fade-down">Web Developer-Internship</h2>
+        <div class="box" data-aos="fade-left">
+          <img src="./assets/img/projects/project1.png" alt="Project 1">
+          <div class="content">
+            <div class="tag">
+              <h3 class="body-st">Online Cosmetic and beauty product shopping<br>-PHP & MYSQL</h3>
+            </div>
+            <div class="desc">
+              <p class="body-des">Our online cosmetic beauty store offers a curated selection of high-quality
+                skincare,
+                makeup, haircare,
+                and fragrance products from top brands. Enjoy the convenience of shopping from home with fast shipping
+                and
+                exceptional customer service, ensuring you find the perfect beauty solutions for your needs.</p>
+              <div class="btns">
+                <a href="" class="btn" id="code-btn">Code</a>
+                <a href="" class="btn" id="demo-btn">Demo</a>
+              </div>
+            </div>
           </div>
-          <div class="desc" data-aos="fade-down">
-            <h3 data-aos="fade-down">At PUMO TECHNOVATION INDIA PRIVATE LIMITED-TAMBARAM, I worked on developing and
-              maintaining web
-              applications using PHP and MYSQL. I also
-              assisted in optimizing the performance of existing web applications.</h3>
-            <p>Dec 2023 - April 2024 </p>
+        </div>
+
+        <div class="box" data-aos="fade-right">
+          <img src="./assets/img/projects/project2.png" alt="Project 2">
+          <div class="content">
+            <div class="tag">
+              <h3 class="body-st">Online Resort management system<br>-PHP & MYSQL</h3>
+            </div>
+            <div class="desc">
+              <p class="body-des">Our resort management system streamlines operations by integrating booking, guest
+                services, and facility management into one easy-to-use platform. Enhance guest experiences and
+                optimize
+                your resort's efficiency with real-time data, automated processes, and personalized service options.
+              </p>
+              <div class="btns">
+                <a href="" class="btn" id="code-btn1">Code</a>
+                <a href="" class="btn" id="demo-btn1">Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box" data-aos="fade-right">
+          <img src="./assets/img/projects/portfolio.png" alt="Project 2">
+          <div class="content">
+            <div class="tag">
+              <h3 class="body-st">Responsive Portfolio Website<br>-Html, Css, Js</h3>
+            </div>
+            <div class="desc">
+              <p class="body-des">This responsive portfolio website showcases my skills, projects, and experience in web
+                development.
+                Built with HTML, CSS, and JavaScript, it features a modern design, smooth animations, and
+                interactive elements. Explore my work, download my resume, and easily get in touch with me through
+                the contact form.</p>
+              </p>
+              <div class="btns">
+                <a href="" class="btn" id="code-btn1">Code</a>
+                <a href="" class="btn" id="demo-btn1">Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+    </section>
+
+    <!--==================== EXPERIENCE SECTION ====================-->
+    <section class="experience" id="experience">
+
+      <h2 class="section-title">Experience </h2>
+      <img src="./assets/img/work-sticker.png" alt="" class="exp-sticker-1">
+      <img src="./assets/img/freelance-worker.png" alt="" class="exp-sticker-2">
+      <div class="timeline" data-aos="fade-down">
+
+        <div class="container right" data-aos="fade-down">
+          <div class="content" data-aos="fade-down">
+            <div class="tag" data-aos="fade-down">
+              <h2 class="body-tit" data-aos="fade-down">Web Developer-Internship</h2>
+            </div>
+            <div class="desc" data-aos="fade-down">
+              <h3 class="content-des" data-aos="fade-down">At PUMO TECHNOVATION INDIA PRIVATE LIMITED-TAMBARAM, I worked
+                on developing and
+                maintaining web applications using PHP and MYSQL. I also assisted in imizing performance of existing web
+                applications.</h3>
+              <p class="content-st">Dec 2023 - April 2024 <i class="ri-checkbox-circle-fill"></i> </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container left" data-aos="fade-down">
+          <div class="content" data-aos="fade-down">
+            <div class="tag" data-aos="fade-down">
+              <h2 class="body-tit " data-aos="fade-down">Freelance - Web Developer</h2>
+            </div>
+            <div class="desc" data-aos="fade-down">
+              <h3 class="content-des">As a freelance web developer, I worked on various projects involving front-end
+                and
+                back-end development,
+                including creating custom websites and web applications for clients.</h3>
+              <p class="content-st">Jan 2023 - Present | Ongoing <i class="ri-time-fill"></i></p>
+            </div>
+          </div>
+        </div>
+        <img draggable="false" data-aos="fade-down" src="./assets/img/cutie-run.gif" alt="logo">
+      </div>
+    </section>
+    <!--==================== CONTACT ====================-->
+    <section class="contact" id="contact">
+      <h2 class="section-title">Get in <span>Touch</span></h2>
+
+      <div class="container">
+        <span class="big-circle"></span>
+        <div class="form">
+          <div class="contact-info">
+            <h2 class="body-title">Let's get in touch</h2>
+            <p class="text">" இன்னாசெய் தாரை ஒறுத்தல் அவர்நாண<br> நன்னயஞ் செய்து விடல்."<br>
+              <span>- திருக்குறள்</span>
+            </p>
+
+            <div class="info">
+              <div class="information">
+                <i class="fas fa-map-marker-alt" style="color: #1abc9c; font-size: 15px;"></i> &nbsp &nbsp
+                <p>82/7, Mettu Street, Thuraiyur, Thiruvannamalai-604408</p>
+              </div>
+              <div class="information">
+                <i class="fas fa-envelope" style="color: #1abc9c; font-size: 15px;"></i> &nbsp &nbsp
+                <p>narenthiran0003@gmail.com</p>
+              </div>
+              <div class="information">
+                <i class="fas fa-phone" style="color: #1abc9c; font-size: 15px;"></i>&nbsp&nbsp
+                <p>9025826323</p>
+              </div>
+            </div>
+
+            <div class="social-media">
+              <h3 class="body-tit">Connect with us :</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+
+            <!-- Form for contact -->
+            <form id="contactForm">
+              <h2 class="title">Contact us</h2>
+              <div class="input-container">
+                <input type="text" name="name" class="input" required />
+                <label for=""><i class="ri-user-2-fill"></i> Name</label>
+                <span>Name</span>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" class="input" required />
+                <label for=""><i class="ri-mail-fill"></i> Email</label>
+                <span>Email</span>
+              </div>
+              <div class="input-container">
+                <input type="tel" name="phone" class="input" required />
+                <label for=""><i class="ri-phone-fill"></i> Phone</label>
+                <span>Phone</span>
+              </div>
+              <div class="input-container textarea">
+                <textarea name="message" class="input" required></textarea>
+                <label for=""><i class="ri-telegram-2-fill"></i> Message</label>
+                <span>Message</span>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+              <p class="contact-message" id="contact-message"></p>
+            </form>
           </div>
         </div>
       </div>
-
-      <div class="container left" data-aos="fade-down">
-        <div class="content" data-aos="fade-down">
-          <div class="tag" data-aos="fade-down">
-            <h2 data-aos="fade-down">Freelance Web Developer</h2>
+    </section>
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer-container container">
+        <!-- Footer Top Section -->
+        <div class="footer-content grid">
+          <!-- About Column -->
+          <div class="footer-column">
+            <h3 class="footer-title">About</h3>
+            <p class="footer-description">
+              I'm Narenthiran, a passionate Full-Stack Developer focused on creating innovative web solutions and
+              digital experiences.
+            </p>
           </div>
-          <div class="desc" data-aos="fade-down">
-            <h3 data-aos="fade-down">As a freelance web developer, I worked on various projects involving front-end and
-              back-end development,
-              including creating custom websites and web applications for clients.</h3>
-            <p>Jan 2023 - Present | Ongoing
-            <p>
+
+          <!-- Quick Links Column -->
+          <div class="footer-column">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#home" class="footer-link">Home</a></li>
+              <li><a href="#about" class="footer-link">About</a></li>
+              <li><a href="#skills" class="footer-link">Skills</a></li>
+              <li><a href="#projects" class="footer-link">Projects</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info Column -->
+          <div class="footer-column">
+            <h3 class="footer-title">Contact Info</h3>
+            <ul class="footer-links">
+              <li class="footer-info">
+                <i class="ri-map-pin-line"></i>
+                <span>Thiruvannamalai, Tamil Nadu</span>
+              </li>
+              <li class="footer-info">
+                <i class="ri-phone-line"></i>
+                <span>+91 9025826323</span>
+              </li>
+              <li class="footer-info">
+                <i class="ri-mail-line"></i>
+                <span>narenthiran0003@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media Column -->
+          <div class="footer-column">
+            <h3 class="footer-title">Social Media</h3>
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/in/narenthiran-k-831010290" target="_blank" class="footer-social-link">
+                <i class="ri-linkedin-box-line"></i>
+              </a>
+              <a href="https://t.me/Narenthiran68" target="_blank" class="footer-social-link">
+                <i class="ri-telegram-line"></i>
+              </a>
+              <a href="https://www.instagram.com/mr__nari__22" target="_blank" class="footer-social-link">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="https://www.facebook.com/narenthiran.k.831010290" target="_blank" class="footer-social-link">
+                <i class="ri-facebook-box-line"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <img draggable="false" data-aos="fade-down" src="./assets/images/cutie-run.gif" alt="logo">
-  </section>
 
-  <!-- CONTACT SECTION -->
-  <section class="contact" id="contact" data-aos="fade-down">
-
-    <img src="./assets/images/icons/contact.gif" alt="" class="icos">
-    <h2 class="heading"> Get in <span>Touch</span></h2>
-
-    <div class="container">
-      <div class="content">
-        <div class="image-box">
-          <img draggable="false" src="./assets/images/cmsoon.png" alt="">
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            &#169; 2024 Narenthiran. All rights reserved
+          </p>
         </div>
-        <form id="contact-form">
-          <div class="form-group">
-            <div class="field" data-aos="fade-left">
-              <input type="text" name="name" placeholder="Name" required>
-              <i class='fas fa-user'></i>
+      </div>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scroll-up" id="scroll-up">
+      <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="./assets/js/scrollreveal.min.js"> </script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
+
+
+    <!--=============== EMAIL JS ===============-->
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var formData = new FormData(event.target);
+        var name = formData.get('name');
+        var email = formData.get('email');
+        var phone = formData.get('phone');
+        var message = formData.get('message');
+
+        sendEmailToOwner(name, email, phone, message, function () {
+          sendThankYouEmail(name, email);
+        });
+      });
+
+      function sendEmailToOwner(name, email, phone, message, callback) {
+        const apiKey = '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';
+
+        const requestData = {
+          sender: { email: "portfolioassistant8@gmail.com" },
+          to: [{ email: "narenthiran0003@icloud.com" }],
+          subject: "🌟 Hello Boss, SomeOne Contacted You! 📨",
+          htmlContent: `
+      <div style="font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.8; color: #333; padding: 20px; border: 1px solid #ddd; border-radius: 12px; background-color: #f9f9f9; max-width: 600px; margin: auto;">
+        <h2 style="color: #FF9800; text-align: center; font-size: 1.8em;">🤖 Hey Boss! Someone Reached Out 🚀</h2>
+        <p style="font-size: 1.1em; text-align: center;">Your portfolio just grabbed some attention! Here are the details:</p>
+        <div style="background-color: #fff; padding: 10px; border-radius: 8px; border: 1px solid #ddd; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);">
+          <p style="font-size: 1.2em;">👤 <strong>Name:</strong> <span style="color: #4CAF50;">${name}</span></p>
+          <p style="font-size: 1.2em;">📧 <strong>Email:</strong> <a href="mailto:${email}" style="color: #2196F3; text-decoration: none;">${email}</a></p>
+          <p style="font-size: 1.2em;">📞 <strong>Phone:</strong> <span style="color: #FF5722;">${phone}</span></p>
+          <p style="font-size: 1.2em;">💬 <strong>Message:</strong></p>
+          <blockquote style="border-left: 5px solid #FF9800; padding-left: 10px; margin: 10px 0; font-style: italic; color: #555; font-size: 1.1em;">${message}</blockquote>
+        </div>
+        <p style="margin-top: 20px; text-align: center; font-size: 1.1em; color: #555;">
+          🛠️ <strong>Tip:</strong> Use your charming communication skills to reply promptly. Let's keep the ball rolling! 🎉
+        </p>
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="mailto:${email}" style="background-color: #4CAF50; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 1.1em; display: inline-block;">📩 Reply Now</a>
+        </div>
+        <p style="margin-top: 30px; text-align: center; color: #999; font-size: 0.9em;">This email was sent by your amazing portfolio assistant 🤖</p>
+      </div>
+      `
+        };
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://api.sendinblue.com/v3/smtp/email', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('api-key', apiKey);
+
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 201) {
+              callback();
+            } else {
+              document.getElementById('contact-message').innerText = 'Failed to send your message. Please try again.';
+              document.getElementById('contact-message').style.color = 'red';
+            }
+          }
+        };
+
+        xhr.send(JSON.stringify(requestData));
+      }
+
+      function sendThankYouEmail(name, email) {
+        const apiKey = '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'; // Secure this key on the server!
+
+        const thankYouData = {
+          sender: { email: "portfolioassistant8@gmail.com" },
+          to: [{ email: email }],
+          subject: "Thank You for Contacting Us! 🙏",
+          htmlContent: `
+          <div style="font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.8; color: #333; background-color: #f9f9f9; padding: 20px; border-radius: 12px; max-width: 600px; margin: auto;        box-shadow:  0px 4px 8px rgba(0, 0, 0, 0.1);">
+            <h1 style="text-align: center; color: #FF9800; font-size: 2em;">🌟 வணக்கம் ${name}! (Hello ${name}!)</h1>
+            <p style="font-size: 1.2em; text-align: center; color: #4CAF50;">🎉 நன்றி! (Thank You!)</p>
+            <p style="font-size: 1.1em;">We’re excited to receive your message and are thrilled you visited our portfolio! Here's what happens next:</p>
+            <ul style="font-size: 1.1em; padding-left: 20px; color: #555;">
+              <li>📧 Your message has been safely delivered.</li>
+              <li>⏳ We'll review it and get back to you soon.</li>
+              <li>📞 Feel free to reply if it's urgent!</li>
+            </ul>
+            <p style="font-size: 1.1em; color: #555;">தயவுசெய்து பொறுத்திருந்து உதவுங்கள். (Please wait patiently while we assist you!) 😊</p>
+            <p style="margin-top: 20px; text-align: center; font-size: 1.1em; color: #555;">
+             💡 Need something urgent? Feel free to reach out anytime.
+            </p>
+            <div style="text-align: center; margin-top: 20px;">
+              <a href="mailto:narenthiran0003@icloud.com" style="background-color: #FF5722; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 1.1em; display: inline-block;">
+              📩 Reply Now
+               </a>
             </div>
-            <div class="field" data-aos="fade-right">
-              <input type="text" name="email" placeholder="Email" required>
-              <i class='fas fa-envelope'></i>
-            </div>
-            <div class="field" data-aos="fade-left">
-              <input type="text" name="phone" placeholder="Phone">
-              <i class='fas fa-phone-alt'></i>
-            </div>
-            <div class="message" data-aos="fade-left">
-              <textarea placeholder="Message" name="message" required></textarea>
-              <i class="fas fa-comment-dots"></i>
-            </div>
-          </div>
-          <div class="button-area">
-            <button type="submit">Submit <i class="fa fa-paper-plane"></i></button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+              <p style="margin-top: 30px; text-align: center; color: #999; font-size: 0.9em;">
+                - <strong>Narenthiran's Digital Assistant 🤖</strong> <br>
+              </p>
+          </div>`
+        };
 
-  <!-- FOOTER SECTION -->
-  <section class="footer">
-    <div class="box-container" data-aos="fade-down">
-      <div class="box" data-aos="fade-down">
-        <h3 data-aos="fade-down">Narenthiran's Portfolio</h3>
-        <p data-aos="fade-down">Thank you for visiting our website! Your support means the world to us, and we hope you
-          found what you were
-          looking for. Come back soon!</p>
-      </div>
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://api.sendinblue.com/v3/smtp/email', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('api-key', apiKey);
 
-      <div class="box" data-aos="fade-down">
-        <h3 data-aos="fade-down">quick links</h3>
-        <a href="#home" data-aos="fade-down"><i class="fas fa-chevron-circle-right"></i> home</a>
-        <a href="#about" data-aos="fade-down"><i class="fas fa-chevron-circle-right"></i> about</a>
-        <a href="#skills" data-aos="fade-down"><i class="fas fa-chevron-circle-right"></i> skills</a>
-        <a href="#education" data-aos="fade-down"><i class="fas fa-chevron-circle-right"></i> education</a>
-        <a href="#work" data-aos="fade-down"><i class="fas fa-chevron-circle-right"></i> projects</a>
-        <a href="#experience" data-aos="fade-down"><i class="fas fa-chevron-circle-right"></i> experience</a>
-      </div>
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            const contactMessage = document.getElementById('contact-message');
+            if (xhr.status === 201) {
+              contactMessage.innerText = '🎉 Your message was sent successfully, and we’ve sent you a confirmation email!';
+              contactMessage.style.color = 'green';
+            } else {
+              contactMessage.innerText = 'Your message was sent, but we couldn’t send a confirmation email.';
+              contactMessage.style.color = 'orange';
+            }
+            document.getElementById('contactForm').reset();
+          }
+        };
 
-      <div class="box" data-aos="fade-down">
-        <h3 data-aos="fade-down">contact info</h3>
-        <p data-aos="fade-down"><i class="fas fa-phone"></i>+91 9025826323</p>
-        <p data-aos="fade-down"><i class="fas fa-envelope"></i>narenthiran0003@gmail.com </p>
-        <p data-aos="fade-down"><i class="fas fa-map-marked-alt"></i>Tamilnadu, India-604408</p>
-      </div>
-      <div class="ft-socials">
-        <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn"
-              href="https://www.linkedin.com/in/narenthiran-k-831010290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"><i class="fab fa-linkedin"></i></a></li>
-          <li><a class="github" aria-label="GitHub" href="https://github.com/narenthiran22" target="_blank"><i
-                class="fab fa-github"></i></a></li>
-          <li><a class="telegram" aria-label="Telegram" href="https://t.me/Narenthiran68" target="_blank"><i
-                class="fab fa-telegram-plane"></i></a></li>
-          <li><a class="instagram" aria-label="Instagram"
-              href="https://www.instagram.com/mr__nari__22?igsh=ZXhxNjRzOHRzbm4w&utm_source=qr"><i
-                class="fab fa-instagram" target="_blank"></i></a></li>
-          <li><a class="whatsapp" aria-label="WhatsApp"
-              href="https://api.whatsapp.com/send/?phone=9025826323&text&type=phone_number&app_absent=0"
-              target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-        </ul>
-      </div>
-    </div>
-    </div>
-
-    <h1 class="credit">Developed By <span><img src="./assets/images/icons/heart.gif" alt="" class="icob"></span><a
-        href="#"> Narenthiran</a></h1>
-
-  </section>
-
-
-  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
-
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        xhr.send(JSON.stringify(thankYouData));
+      }
     </script>
-  <script src="./assets/js/progresscircle.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-  <script>
-    AOS.init();
-  </script>
-  <script src="./assets/js/script.js"></script>
 
+
+    <!--=============== MAIN JS ===============-->
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
