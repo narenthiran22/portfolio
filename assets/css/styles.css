@@ -439,6 +439,7 @@ img {
   padding: 1rem 1.5rem;
   font-weight: var(--font-semi-bold);
   border-radius: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .button i {
   margin-left: 0.5rem;
@@ -734,9 +735,14 @@ img {
 .skill-scroll-wrapper {
   display: flex;
   overflow-x: scroll;
+  scroll-snap-type: x mandatory;
   padding: 10px;
   gap: 15px; /* Space between items */
   scroll-behavior: smooth; /* Smooth scrolling */
+}
+.skill-scroll-wrapper >*{
+  scroll-snap-align: center;
+  flex: 0 0 auto;
 }
 
 .skill-scroll-wrapper::-webkit-scrollbar {
@@ -1085,6 +1091,11 @@ button.active::after {
   scroll-behavior: smooth;
   gap: 20px;
   padding: 20px;
+}
+
+.education .scroll-wrapper > * {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
 }
 .education .box {
   flex: 0 0 auto;
