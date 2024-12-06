@@ -1072,6 +1072,7 @@ button.active::after {
   grid-template-columns: repeat(2, 1fr);
   gap: 25px;
   width: 90%;
+  margin: 0px 0px 0px -1%;
   justify-self: center !important;
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -1129,7 +1130,7 @@ button.active::after {
   width: 100px;
   position: absolute;
   transform: translateY(442%);
-  opacity: 0.9;
+  opacity: 1;
   filter: drop-shadow(2px 4px 6px black);
   z-index: 1;
 }
@@ -1137,7 +1138,7 @@ button.active::after {
   width: 100px;
   position: absolute;
   right: 10%;
-  opacity: 0.9;
+  opacity: 1;
   filter: drop-shadow(2px 4px 6px black);
   z-index: 1;
 }
