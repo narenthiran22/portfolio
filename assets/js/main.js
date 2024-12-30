@@ -108,31 +108,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // EXPERIENCE FILE LOAD
-  fetch("./assets/json/experience.json")
+  fetch("/assets/json/experience.json")
     .then((response) => response.json())
     .then((data) => {
-      const experienceContent = document.getElementById("experience-content");
-      data.forEach((item, index) => {
-        const container = document.createElement("div");
-        container.classList.add(
-          "container",
-          index % 2 === 0 ? "right" : "left"
-        );
-        container.setAttribute("data-aos", "fade-down");
-        container.innerHTML = `
-                <div class="content" data-aos="fade-down">
-                  <div class="tag" data-aos="fade-down">
-                    <h2 class="body-tit" data-aos="fade-down">${item.title}</h2>
-                  </div>
-                  <div class="desc" data-aos="fade-down">
-                    <h3 class="content-des" data-aos="fade-down">${item.description}</h3>
-                    <p class="content-st">${item.date} <i class="${item.icon}"></i></p>
-                  </div>
+    const experienceContent = document.getElementById("experience-content");
+    data.forEach((item, index) => {
+      const container = document.createElement("div");
+      container.classList.add(
+        "container",
+        index % 2 === 0 ? "right" : "left"
+      );
+      container.setAttribute("data-aos", "fade-down");
+      container.innerHTML = `
+              <div class="content" data-aos="fade-down">
+                <div class="tag" data-aos="fade-down">
+                  <h2 class="body-tit" data-aos="fade-down">${item.title}</h2>
                 </div>
-              `;
-        experienceContent.appendChild(container);
-      });
+                <div class="desc" data-aos="fade-down">
+                  <h3 class="content-des" data-aos="fade-down">${item.description}</h3>
+                  <p class="content-st">${item.date} <i class="${item.icon}"></i></p>
+                </div>
+              </div>
+            `;
+      experienceContent.appendChild(container);
     });
+    experienceContent.innerHTML += `
+      <img draggable="false" data-aos="fade-down" src="./assets/img/cutie-run.gif" alt="logo">
+    `;
+  });
 });
 
 // IMAGE CHANGE
