@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // EDUCATION FILE LOAD
-  fetch("/assets/json/education.json")
+  fetch("./assets/json/education.json")
     .then((response) => response.json())
     .then((data) => {
       const educationContent = document.getElementById("education-content");
