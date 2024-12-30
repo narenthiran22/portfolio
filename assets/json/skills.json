@@ -1,0 +1,67 @@
+[
+  {
+    "category": "Skills",
+    "quote": "\"Skill is the bridge between inspiration and achievement.\"",
+    "author": "Anonymous",
+    "skills": [
+      { "level": "advanced", "name": "Problem solving" },
+      { "level": "intermediate", "name": "Teamwork" },
+      { "level": "basic", "name": "Creativity" },
+      { "level": "expert", "name": "Communication" },
+      { "level": "advanced", "name": "Pressure management" },
+      { "level": "advanced", "name": "Attention to detail" },
+      { "level": "intermediate", "name": "Adaptability" },
+      { "level": "intermediate", "name": "Leadership" },
+      { "level": "intermediate", "name": "Critical thinking" },
+      { "level": "intermediate", "name": "Time management" }
+
+    ]
+  },
+  {
+    "category": "Languages",
+    "quote": "\"The only way to do great work is to love what you do.\"",
+    "author": "Steve Jobs",
+    "skills": [
+      { "level": "expert", "name": "Tamil" },
+      { "level": "intermediate", "name": "English" }
+
+    ]
+  },
+  {
+    "category": "Development",
+    "quote": "\"Development is the art of turning ideas into reality, one line of code at a time.\"",
+    "author": "Sundar Pichai",
+    "skills": [
+      { "level": "advanced", "name": "HTML5" },
+      { "level": "advanced", "name": "CSS3" },
+      { "level": "advanced", "name": "Javascript" },
+      { "level": "advanced", "name": "BOOTSTRAP" },
+      { "level": "advanced", "name": "JQuery" },
+      { "level": "advanced", "name": "Python" },
+      { "level": "advanced", "name": "PHP" },
+      { "level": "advanced", "name": "C Programming" },
+      { "level": "intermediate", "name": "C++" },
+      { "level": "intermediate", "name": "Django" },
+      { "level": "intermediate", "name": "MYSQL" },
+      { "level": "intermediate", "name": "Tailwind CSS" },
+      { "level": "learning", "name": "ReactJs" },
+      { "level": "learning", "name": "Flutter" }
+    ]
+  },
+  {
+    "category": "Software",
+    "quote": "\"Programming isn’t about what you know; it’s about what you can figure out.\"",
+    "author": "Chris Pine",
+    "skills": [
+      { "level": "expert", "name": "MS Office" },
+      { "level": "basic", "name": "PhotoShop" },
+      { "level": "basic", "name": "Tally" },
+      { "level": "intermediate", "name": "CodeBlocks" },
+      { "level": "intermediate", "name": "Visual Studio Code" },
+      { "level": "intermediate", "name": "XAMPP" },
+      { "level": "intermediate", "name": "SQL Server Management" },
+      { "level": "basic", "name": "Android Studio" },
+      { "level": "basic", "name": "GitHub" }
+    ]
+  }
+]
