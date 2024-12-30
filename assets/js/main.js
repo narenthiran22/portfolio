@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // CERTIFICATE FILE LOAD
-  fetch("/assets/json/certificate.json")
+  fetch("./assets/json/certificate.json")
     .then((response) => response.json())
     .then((data) => {
       const certificateContent = document.getElementById("certificate-content");
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // PROJECTS FILE LOAD
-  fetch("/assets/json/projects.json")
+  fetch("./assets/json/projects.json")
     .then((response) => response.json())
     .then((data) => {
       const projectsContent = document.getElementById("projects-content");
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // SKILLSFILE LOAD
-  fetch("/assets/json/skills.json")
+  fetch("./assets/json/skills.json")
     .then((response) => response.json())
     .then((data) => {
       const skillsContent = document.getElementById("skills-content");
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // EXPERIENCE FILE LOAD
-  fetch("/assets/json/experience.json")
+  fetch("./assets/json/experience.json")
     .then((response) => response.json())
     .then((data) => {
       const experienceContent = document.getElementById("experience-content");
@@ -138,10 +138,10 @@ document.addEventListener("DOMContentLoaded", function () {
 // IMAGE CHANGE
 document.addEventListener("DOMContentLoaded", function () {
   const images = [
-  "/assets/img/images/Nari2.jpg",
-  "/assets/img/images/Nari3.jpg",
-  "/assets/img/images/Nari5.jpg",
-  "/assets/img/images/Nari6.JPG"
+  "./assets/img/images/Nari2.jpg",
+  "./assets/img/images/Nari3.jpg",
+  "./assets/img/images/Nari5.jpg",
+  "./assets/img/images/Nari6.JPG"
   ];
   let currentIndex = 0;
   const imgElement = document.getElementById("about-img");
