@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // EXPERIENCE FILE LOAD
-  fetch("/assets/json/experience.json")
+  fetch("./assets/json/experience.json")
     .then((response) => response.json())
     .then((data) => {
     const experienceContent = document.getElementById("experience-content");
