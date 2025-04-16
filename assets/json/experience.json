@@ -1,11 +1,5 @@
 [
   {
-    "title": "Office Data Entry - Zinnov-Global Management",
-    "description": "Office Data Entry at Zinnov - Global Management, responsible for accurately inputting and managing data to support business operations.",
-    "date": "Augest 2020 - Present | March 2022",
-    "icon": "ri-checkbox-circle-fill"
-  },
-  {
     "title": "Web Developer-Internship",
     "description": "At PUMO TECHNOVATION INDIA PRIVATE LIMITED-TAMBARAM, I worked on developing and maintaining web applications using PHP and MYSQL. I also assisted in optimizing performance of existing web applications.",
     "date": "Dec 2023 - April 2024",
@@ -17,11 +11,5 @@
     "date": "Jan 2023 - Present | Jan 2024",
     "icon": "ri-checkbox-circle-fill"
   },
-  {
-    "title": "Contract Employee - Samsung Electronics India Pvt Ltd",
-    "description": "Working as a Contract Employee at Samsung Electronics India Pvt Ltd, handling assigned responsibilities efficiently within the organization.",
-    "date": "Jan 2024 - Present | Ongoing",
-    "icon": "ri-time-fill"
-  }
 
 ]
